@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
-
+<html lang="en">
 <head>
 
     <meta charset="UTF-8">
@@ -10,27 +9,194 @@
     <title>메가박스 사이트로 실습하기</title>
 
     <!-- css -->
-  
+    <link rel="stylesheet" href="assets/css/reset07.css">
+    <link rel="stylesheet" href="assets/css/style07.css">
+    <link rel="stylesheet" href="assets/css/swiper.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.css">
 
     <!-- 웹 폰트 -->
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&amp;subset=korean" rel="stylesheet">
 </head>
-
 <body>
     <header id="header">
-        
+        <div class="container">
+            <div class="row">
+                <div class="header clearfix">
+                    <h1>
+                        <a href="#">
+                            <em><img src="assets/img/logo.png" alt="MEGABOX"></em>
+                            <strong><img src="assets/img/logo-sub.png" alt="LIFE THEATER"></strong>
+                        </a>    
+                    </h1>
+                    <nav class="nav">
+                        <ul class="clearfix">
+                            <li><a href="#">영화</a></li>
+                            <li><a href="#">큐레이션</a></li>
+                            <li><a href="#">영화관</a></li>
+                            <li><a href="#">특별관</a></li>
+                            <li><a href="#">스토어</a></li>
+                            <li><a href="#">이벤트</a></li>
+                            <li><a href="#">로그인</a></li>
+                        </ul>
+                    </nav>    
+                </div>
+            </div>
+        </div>
     </header>
     <!-- //header 마감-->
     
     
     <section id="banner">
-        
-            
+        <div class="banner_menu">
+            <h2 class="ir_so">배너 영역</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="bm_left">
+                        <ul>
+                            <li class="total"><a href="#">전체메뉴</a></li>
+                            <li class="line"><a href="#">필름 소사이어티</a></li>
+                            <li><a href="#">클래식 소사이어티</a></li>
+                        </ul>
+                    </div>
+                    <div class="bm_right">
+                        <ul>
+                            <li class="line"><a href="#">고객센터</a></li>
+                            <li class="line"><a href="#">멤버쉽</a></li>
+                            <li><a href="#">VIP</a></li>
+                        </ul>
+                        <ul>
+                            <li class="white"><a href="#">상영시간표</a></li>
+                            <li class="purple"><a href="#">빠른예매</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slider">
+            <!--<div><img src="assets/img/swiper01.jpg" alt="어벤져스 엔드게임"></div>-->
+<!--사진을 html에서 넣어도 되는데 backgroud로 이미지 넣고 그 위에 텍스트를 나열할꺼면 css에서 가져가는 것도 괜찮을듯?-->
+            <div class="swiper-slide ss1"><!--slider에 이미지가 같이 있음 60line 근처 정도에-->
+                <div class="container">
+                    <div class="row">
+                        <h2>캡틴 마블 <em>Captain Marvel</em></h2>
+                        <p>새로운 히어로, 어벤져스의 희망</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </section>
     <!-- //banner 마감-->
 
     <section id="movie">
-        
+        <div class="container">
+            <div class="row">
+                <div class="movie">
+                    <h2 class="ir_so">최신 영화 정보</h2>
+                    <div class="movie_title">
+                        <ul>
+                            <li class="active"><a href="#">박스오피스</a></li>
+                            <li><a href="#">최신개봉작</a></li>
+                            <li><a href="#">상영예정작</a></li>
+                            <li><a href="#">큐레이션</a></li>
+                        </ul>
+                    </div>
+                    <div class="movie_chart">
+                        <div class="chart_cont1">
+                            <div>
+                                <div class="poster">
+                                    <figure>
+                                        <img src="assets/img/poster01.jpg" srcset="assets/img/poster01@2.jpg 2x"  alt="침묵">
+                                    </figure>
+                                    <div class="rank"><strong>1</strong></div>
+                                    <div class="mx">
+                                        <span class="icon m ir_pm">MX</span>
+                                        <span class="icon b ir_pm">Boutique</span>
+                                    </div>
+                                </div>
+                                <div class="infor">
+                                    <h3><span class="icon all ir_pm">전체관람가</span> <strong>침묵</strong></h3>
+                                    <div class="infor_btn">
+                                        <a href="#">상세보기</a>
+                                        <a href="#">예매하기</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="poster">
+                                    <figure>
+                                        <img src="assets/img/poster02.jpg" srcset="assets/img/poster02@2.jpg 2x"  alt="신세계">
+                                    </figure>
+                                    <div class="rank"><strong>2</strong></div>
+                                    <div class="mx">
+                                        <span class="icon m ir_pm">MX</span>
+                                        <span class="icon b ir_pm">Boutique</span>
+                                    </div>
+                                </div>
+                                <div class="infor">
+                                    <h3><span class="icon a19 ir_pm">19세</span> <strong>신세계</strong></h3>
+                                    <div class="infor_btn">
+                                        <a href="#">상세보기</a>
+                                        <a href="#">예매하기</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="poster">
+                                    <figure>
+                                        <img src="assets/img/poster03.jpg" srcset="assets/img/poster03@2.jpg 2x"  alt="마스터">
+                                    </figure>
+                                    <div class="rank"><strong>3</strong></div>
+                                    <div class="mx">
+                                        <span class="icon m ir_pm">MX</span>
+                                        <span class="icon b ir_pm">Boutique</span>
+                                    </div>
+                                </div>
+                                <div class="infor">
+                                    <h3><span class="icon a15 ir_pm">15세</span> <strong>마스터</strong></h3>
+                                    <div class="infor_btn">
+                                        <a href="#">상세보기</a>
+                                        <a href="#">예매하기</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="poster">
+                                    <figure>
+                                        <img src="assets/img/poster04.jpg"  srcset="assets/img/poster04@2.jpg 2x" alt="마약왕">
+                                    </figure>
+                                    <div class="rank"><strong>4</strong></div>
+                                    <div class="mx">
+                                        <span class="icon m ir_pm">MX</span>
+                                        <span class="icon b ir_pm">Boutique</span>
+                                    </div>
+                                </div>
+                                <div class="infor">
+                                    <h3><span class="icon a19 ir_pm">19세</span> <strong>마약왕</strong></h3>
+                                    <div class="infor_btn">
+                                        <a href="#">상세보기</a>
+                                        <a href="#">예매하기</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //chart_cont1-->
+                        <div class="chart_cont2">
+                            
+                        </div>
+                        <!-- //chart_cont2-->
+                        <div class="chart_cont3">
+                            
+                        </div>
+                        <!-- //chart_cont3-->
+                        <div class="chart_cont4">
+                            
+                        </div>
+                        <!-- //chart_cont4-->
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     
     <!-- 자바스크립트 라이브러리 -->
