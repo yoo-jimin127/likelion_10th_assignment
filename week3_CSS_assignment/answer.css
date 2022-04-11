@@ -24,7 +24,9 @@
 }
 
 /* 로우 영역 */
-.row {padding: 0 28px;}
+.row {
+    padding: 0 28px;
+}
 
 /* 모바일 메뉴 */
 .ham {
