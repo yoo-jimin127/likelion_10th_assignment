@@ -157,7 +157,6 @@
     padding: 3px 10px; 
     display: inline-block; 
     border: 1px solid #fff; 
-    transition: all 0.3s;
 }
 
 .banner_menu .bm_left li.total a:hover {
