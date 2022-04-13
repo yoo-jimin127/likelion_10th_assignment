@@ -232,10 +232,8 @@
 }
 
 .slider .ss1 {
-    background: url(../img/swiper01.jpg) no-repeat center center; 
+    background: url(assets/img/swiper01.jpg) no-repeat center center; 
     background-size: cover;
-    position: absolute;
-    bottom: 100px;
 }
 
 .slider .swiper-slide h2 {
