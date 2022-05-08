@@ -148,7 +148,3 @@
     console.log('weather : ' + weather + ',' + ' temparature : ' + temparature + ' !');
     console.log(`weather : ${weather}, temparature : ${temparature} !`);
 }
-
-// ========================= + ECMA 11 =========================
-// Optional Chaining
-
