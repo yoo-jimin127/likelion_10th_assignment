@@ -45,6 +45,62 @@ console.log(x);
 1 + false; // 1 : false - 0
 1 + null; // 1 : null - 0
 
+// ###### 05. 제어문 ######
+{
+    var foo = 10;
+}
+
+let num = 2;
+let kind;
+
+if (num > 0) {
+    kind = "양수";
+} else if (num < 0) {
+    kind = "음수";
+} else {
+    kind = "0";
+}
+
+// ###### 06. 형변환 ######
+const falsy1 = null;
+Number(falsy1); // 0;
+
+const falsy2 = '';
+Number(falsy2); // 0;
+
+const falsy3 = false;
+Number(falsy3); // 0;
+
+const truthy1 = [];
+Number(truthy1); // 0;
+
+const truthy2 = true;
+Number(truthy2); // 1;
+
+const truthy3 = {};
+Number({}); // NaN;
+
+String(123); //”123"
+String(123.456); //”123.456"
+
+Boolean(100); //true
+Boolean("1"); //true
+Boolean(true); //true
+Boolean(Object); //true
+Boolean([]); //true
+Boolean(0); //false
+Boolean(NaN); //false
+Boolean(null); //false
+Boolean(undefined); //false
+Boolean( ); //false
+
+const numb1 = 0;
+Boolean(numb1); // false
+!!numb1; // false
+!numb1; // true
+
+
+
 // 변수에 값을 저장하는 방법
 var userId = 1;
 var userName = "yoo";
