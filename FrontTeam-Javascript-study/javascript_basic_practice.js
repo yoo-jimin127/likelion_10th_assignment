@@ -112,3 +112,71 @@ var users = [
     { id : 1, name : 'yoo'},
     { id : 1, name : 'kim'},
 ]
+
+// ###### 3. 데이터 타입 ######
+
+// 배열 생성 (빈 배열)
+// let arr = []; 
+
+// arr[0] = 'zero';
+// arr[1] = 'one';
+// arr[2] = 'two';
+
+// for (let i = 0; i < arr.length; i++) {
+//     console.log(arr[i]);
+// }    
+
+// 배열 생성 (초기 값 할당)
+// let arr = ['zero', 'one', 'two']; 
+
+// for (let i = 0; i < arr.length; i++) {
+//     console.log(arr[i]);
+// }
+
+// 배열 생성 (배열 크기 지정)
+// 쉼표 개수만큼 크기가 지정됨
+// let arr = [,,,]; 
+
+// for (let i = 0; i < arr.length; i++) {
+//     console.log(arr[i]);
+// }
+        
+// 값이 할당되지 않아서 undefined 3번 출력
+
+// 배열 생성 (빈 배열)
+// let arr = new Array(); 
+
+// arr[0] = 'zero';
+// arr[1] = 'one';
+// arr[2] = 'two';
+
+// for (let i = 0; i < arr.length; i++) {
+//     console.log(arr[i]);
+// }     
+
+// 배열 생성 (초기 값 할당)
+// let arr = new Array('zero', 'one', 'two'); 
+
+// for (let i = 0; i < arr.length; i++) {
+//     console.log(arr[i]);
+// }     
+
+// 배열 생성 (배열 크기 지정)
+// 원소가 1개이고 숫자인 경우 배열 크기로 사용됨
+// let arr = new Array(3); 
+        
+// for (let i = 0; i < arr.length; i++) {
+//     console.log(arr[i]);
+// }
+        
+// 값이 할당되지 않아서 undefined 3번 출력   
+
+const fruits = ['apple', 'banana', 'kiwi', 'melon'];
+
+console.log(fruits.length);
+
+// 배열의 원소 개수만큼 반복 (배열의 모든 인덱스에 방문)
+for (let i = 0; i < fruits.length; i++) {
+    console.log(fruits[i]);
+}
+
