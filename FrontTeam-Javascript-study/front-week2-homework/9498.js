@@ -17,3 +17,8 @@ else if (score>=60){
 else{
     console.log('F');
 }
+
+switch(score) {
+    case 100 :
+    case 90 :
+}
