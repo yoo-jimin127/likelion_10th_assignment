@@ -224,3 +224,32 @@ let logOdds = function (i) {
 // 반복 호출할 함수를 인수로 전달
 repeat(5, logOdds); // 1 3
 
+let person1 = {
+    student_number : '20193017',
+    phone_number : '010-9936-4524',
+    email : 'dbwlals9936@naver.com',
+}
+
+let person2 = {
+    student_number : '20221234',
+    phone_number : '010-class_person2-전화번호',
+    email : 'bbiyak99u@naver.com',
+}
+
+class Person {
+    constructor(student_number, phone_number, email) {
+        // 인수로 인스턴스 초기화
+        this.student_number = student_number;
+        this.phone_number = phone_number;
+        this.email = email;
+    }
+}
+
+// 인수로 초기값 전달. 초기값 → constructor에 전달
+const class_person1 = new Person('20193017', '010-9936-4524', 'dbwlals9936@naver.com');
+const class_person2 = new Person('20221234', '010-class_person2-전화번호', 'bbiyak99u@naver.com');
+
+console.log(class_person1);
+console.log(class_person2);
+console.log(typeof class_person1);
+
