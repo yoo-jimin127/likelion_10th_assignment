@@ -72,4 +72,76 @@ delete person.address; // 존재하지 않는 프로퍼티의 경우 삭제 X �
 
 console.log(person); // {name: "Kim"}
 
+let str = 'front-end';
+console.log(str.length); // 9
+console.log(str.charAt(0)); // F
+
+let str2 = 'coding';
+str2.prop = 'make prop'; // JS 내부적으로 String 객체가 만들어짐
+
+// prop 프로퍼티는 해당 객체에 저장된 후 곧 제거 
+console.log(str2.prop); // undefined
+
+let score = 80;
+let copy = score;
+
+copy = 100;
+console.log(score); // 80
+
+let person = {
+    name: 'Lee'
+};
+
+person.name = 'Kim'; // 프로퍼티의 갱신
+person.address = 'Seoul'; // 프로퍼티의 추가
+
+// 함수 선언문
+function add(x, y) {
+    return x + y;
+}
+
+// 함수 참조
+console.dir(add); // add(x, y)
+
+// 함수 호출
+console.log(add(2, 5)); // 7
+
+// 함수 표현식
+var add = function(x, y) {
+    return x + y;
+}
+console.log(add(2, 5)); // 7
+
+// 기명 함수 표현식
+var sub = function foo(x, y) {
+    return x - y;
+}
+console.log(sub(5, 2)); // 3
+console.log(foo(5, 2)); // ReferenceError : foo is not defined
+
+// 함수 참조
+console.dir(add); // f add(x, y)
+console.dir(sub); // undefined
+
+// 함수 호출
+console.log(add(2, 5)); // 7
+console.log(sub(5, 2)); // TypeError : sub is not a function
+
+// 함수 선언문
+function add(x, y) {
+    return x + y;
+}
+
+// 함수 표현식
+var sub = function (x, y) {
+    return x - y;
+}
+
+
+// Function 샏성자 함수
+var add = Function('x', 'y', 'return x + y');
+
+// 화살표 함수 (ES6)
+var add = (x, y) => x + y;
+
 
