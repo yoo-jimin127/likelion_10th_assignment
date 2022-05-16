@@ -1,5 +1,4 @@
 // Shorthand property name
-
 {
     const likelion = {
         name: 'SSULL',
@@ -51,7 +50,6 @@
 
     // array : [] 이용해 array destructuring
     const animals = ['cat', 'dog'];
-
 
     {
         // 이전
@@ -140,7 +138,7 @@
     }
 }
 
-// Tempate Literals
+// Template Literals
 {
     const weather = 'sunny';
     const temparature = '10';
@@ -148,3 +146,4 @@
     console.log('weather : ' + weather + ',' + ' temparature : ' + temparature + ' !');
     console.log(`weather : ${weather}, temparature : ${temparature} !`);
 }
+
