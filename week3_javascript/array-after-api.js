@@ -70,7 +70,7 @@ const students = [
 {
     // 5. find : 조건을 만족하는 첫번째 요소를 찾아주는 함수 (콜백함수 전달)
         // 첫번째로 true를 리턴하는 요소를 찾아내는 작업
-    const result_Q5 = students.find((student, index) => {
+    const result_Q5 = students.find((student) => {
         return student.score === 90;
     })
     console.log(result_Q5); // Student { name: 'C', age: 30, enrolled: true, score: 90 }
@@ -166,20 +166,20 @@ const students = [
     // Student { name: 'A', age: 29, enrolled: true, score: 45 }
 }
 
-// Q10. 모든 학생의 점수를 string으로 변환해 출력해주세요. : '45, 80, 90, 66, 88'
+// Q10. 모든 학생의 점수를 string으로 변환해 출력해주세요. : '45, 80, 90, 66 + 88'
 {
     // 10. map → join
     const result_Q10 = students
-    .map((student) => student.score)
+    .map((student) => student.score) //[45, 80, 90, 66, 88]
     .join();
     console.log(result_Q10);
 
     // 10-1. 50점 이상인 사람들의 점수만 string으로
-    const result_Q10_1 = students.
-    map((student) => student.score)
-    .filter((score) => score >= 50)
+    const result_Q10_1 = students
+    .map((student) => student.score) //[45, 80, 90, 66, 88]
+    .filter((score) => score >= 50) // [80, 90, 66, 88]
     .join();
-    console.log(result_Q10_1);
+    console.log(result_Q10_1); //'80, 90, 66, 88'
 }
 
 // Q11. 학생들의 점수를 오름차순으로 정렬해 String으로 출력해주세요. : '45, 66, 80, 88, 90'
@@ -187,7 +187,7 @@ const students = [
     // 11. sort : 배열의 요소를 정렬해주는 함수
     const result_Q11 = students
     .map((student) => student.score)
-    .sort((a,b) => a - b)
+    .sort((a,b) => a - b) // 45 50 , 50 45
     .join();
     console.log(result_Q11);
 
@@ -197,5 +197,7 @@ const students = [
     .join();
     console.log(result_Q11_1);
 }
+
+// [45, 66, 80, 88, 90]
 
 // 퀴즈 코드 제공 : https://www.youtube.com/watch?v=3CUjtKJ7PJg
