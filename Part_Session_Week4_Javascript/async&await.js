@@ -1,22 +1,58 @@
-// Javascript : 동기적(Synchronous)
-// 호이스팅된 이후 순차적으로 코드가 실행됨
-// console.log("sync 1");
-// console.log("sync 2");
-// setTimeout(function () {
-//     console.log("async 1");
-// }, 1000);
-// console.log("sync 3");
+// async & await
 
-// 동기적 콜백함수
-function printMessage(param_func) {
-    param_func();
+// 1. async
+async function fetchUser() {
+    return 'front';
 }
 
-// 비동기적 콜백함수
-function printDelayMessage(param_func, delay) {
-    setTimeout(param_func, delay);
+const user = fetchUser();
+user.then(console.log);
+console.log(user);
+
+// 2. await
+function delay(ms) {
+    return new Promise (resolve => setTimeout(resolve, ms));
 }
 
-printDelayMessage(() => console.log('asynchronous - arrow function'), 3000);
-printMessage(() => console.log('synchronous - arrow function'));
+async function getHappy() {
+    await delay(1000);
+    return '🥰🤣😊😆';
+}
+
+async function getMeat() {
+    await delay(3000);
+    return '🥩🍗🍖';
+}
+
+// function happyCollector() {
+//     return getHappy()
+//     .then (happy => {
+//         return getMeat()
+//         .then(meat => `${happy} + ${meat}`);
+//     });
+// }
+
+async function happyCollector() {
+    const happyPromise = getHappy();
+    const meatPromise = getMeat();
+    const happy = await happyPromise;
+    const meat = await meatPromise;
+    return `${happy} + ${meat}`;
+}
+
+happyCollector().then(console.log);
+
+// 3. Useful Promise APIs
+function happyMeatCollector() {
+    return Promise.all([getHappy(), getMeat()])
+    .then(item => item.join(' + '));
+}
+
+happyMeatCollector().then(console.log);
+
+function onlyHappy() {
+    return Promise.race([getHappy(), getMeat()]);
+}
+
+onlyHappy().then(console.log);
 
