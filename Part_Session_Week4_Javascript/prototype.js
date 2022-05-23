@@ -1,8 +1,8 @@
 // Prototype Chain : 연쇄적으로 프로토타입이 연결되어있는 관계
 
-// case 1
+// =============================<< prototype 개념 설명 1 >>================================
 function Ultra() {}
-Ultra.prototype.ultraProp = true; // Ultra의 프로토타입 값에는 ultraProp이라는 값이 저장되어있는 형태
+Ultra.prototype.ultraProp = true; // Ultra에 ultraProp이라는 값이 저장되어있는 형태
 
 function Super(){}
 Super.prototype = new Ultra(); // Ultra 생성자가 만든 객체가 안에 들어감
@@ -20,7 +20,7 @@ o.ultraProp = 1;
 console.log(o.ultraProp); // 1
 // Javascript : o 객체가 ultraProp를 가지고 있는지 확인부터 
 
-// case 2
+// =============================<< prototype 개념 설명 2 >>================================
 function Ultra2() {}
 Ultra2.prototype.ultraProp = true;
 
@@ -34,7 +34,7 @@ Sub2.prototype.ultraProp = 2; // Sub2에서 ultraProp 값 지정
 let o2 = new Sub2(); 
 console.log(o2.ultraProp); // 2
 
-// case 3
+// =============================<< prototype 개념 설명 3 >>================================
 function Ultra3() {}
 Ultra3.prototype.ultraProp = true;
 
@@ -53,10 +53,10 @@ console.log(o3.ultraProp); // 4
 // 자식에 일어날 일이 부모에 영향을 주지 않도록
 // 상속받고자 하는 객체를 넣어줄 것
 
-// =============================prototype 응용================================
+// =============================<< prototype 응용 >>================================
 
 // javascript : prototype based language
-function Person(name, first, second, third) {
+function Person(name, first, second) {
     this.name = name;
     this.first = first;
     this.second = second;
@@ -66,23 +66,26 @@ function Person(name, first, second, third) {
 }
 
 let kim = new Person('kim', 10, 20);
-
 kim.sum = function() {
-    return 'modified : ' + (this.first + this.second);
+    return 'modified kim : ' + (this.first + this.second);
 }
 
 let lee = new Person('lee', 10, 10);
+lee.sum = function() {
+    return 'modified lee : ' + (this.first + this.second);
+}
+
 console.log("kim.sum() : ", kim.sum());
 console.log("lee.sum() : ", lee.sum());
 
 // --------------------------------------------------------------------------
-function Person2(name, first, second, third) {
+function Person2(name, first, second) {
     this.name = name;
     this.first = first;
     this.second = second;
 }
 
-Person2.prototype.sum = function() { // 한번만 정의됨
+Person2.prototype.sum = function() { // 한번만 정의됨 & 실행됨 (원형 정의)
     return this.first + this.second;
 }
 
