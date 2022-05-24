@@ -37,6 +37,7 @@ const member = new UserStorage();
 const input_id = prompt("id를 입력해주세요");
 const input_pw = prompt("패스워드를 입력해주세요");
 
+// 3. 로그인하기
 member.loginUser(input_id, input_pw)
     .then(login_success_id => member.getRoles(login_success_id)) // .then(member.getRoles)
     .then(success_id_role => alert(`${success_id_role.name}'s role is ${success_id_role.role}`))

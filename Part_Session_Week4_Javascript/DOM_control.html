@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <ul>
+        <li id="id_active">HTML</li>
+        <li class="class_active">CSS</li>
+        <li class="class_active">JavaScript</li>
+    </ul>
+    <ol>
+        <li>HTML</li>
+        <li class="active">CSS</li>
+        <li>JavaScript</li>
+    </ol>
+    <script>
+        // document.getElementsByTagName : 태그명으로 제어 대상 찾기
+        // var lis = document.getElementsByTagName('li');
+        // for(var i=0; i < lis.length; i++){
+        //     lis[i].style.color='red';   
+        // }
+
+        // document.getElementsByClassName : 클래스로 제어 대상 찾기
+        // var lis = document.getElementsByClassName('class_active');
+        // for(var i=0; i < lis.length; i++){
+        //     lis[i].style.color='blue';   
+        // }
+
+        // document.getElementById : ID로 제어 대상 찾기
+        // var li = document.getElementById('id_active');
+        // li.style.color='green';
+
+        // document.querySelector : CSS 선택자로 제어 대상 찾기
+        // var li = document.querySelector('li');
+        // li.style.color='yellow';
+        // var li = document.querySelector('.active');
+        // li.style.color='purple';
+
+        // document.querySelectorAll : CSS 선택자로 모든 제어 대상 찾기
+        // var lis = document.querySelectorAll('li');
+        // for(var name in lis){
+        //     lis[name].style.color = 'pink';
+        // }
+
+    </script>
+</body>
+</html>
