@@ -1,13 +1,13 @@
 // async & await
 
 // 1. async
-async function fetchUser() {
-    return 'front';
-}
+// async function fetchUser() {
+//     return 'front';
+// }
 
-const user = fetchUser();
-user.then(console.log);
-console.log(user);
+// const user = fetchUser();
+// user.then(console.log);
+// console.log(user);
 
 // 2. await
 function delay(ms) {
@@ -15,12 +15,12 @@ function delay(ms) {
 }
 
 async function getHappy() {
-    await delay(1000);
+    await delay(3000);
     return '🥰🤣😊😆';
 }
 
 async function getMeat() {
-    await delay(3000);
+    await delay(1000);
     return '🥩🍗🍖';
 }
 
@@ -40,15 +40,15 @@ async function happyCollector() {
     return `${happy} + ${meat}`;
 }
 
-happyCollector().then(console.log);
+// happyCollector().then(console.log);
 
 // 3. Useful Promise APIs
-function happyMeatCollector() {
-    return Promise.all([getHappy(), getMeat()])
-    .then(item => item.join(' + '));
-}
+// function happyMeatCollector() {
+//     return Promise.all([getHappy(), getMeat()])
+//     .then(item => item.join(' + '));
+// }
 
-happyMeatCollector().then(console.log);
+// happyMeatCollector().then(console.log);
 
 function onlyHappy() {
     return Promise.race([getHappy(), getMeat()]);
