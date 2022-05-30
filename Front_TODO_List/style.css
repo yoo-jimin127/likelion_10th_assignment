@@ -88,3 +88,12 @@ li{
     font-weight: bold;
     cursor: pointer;
 }
+
+#quote {
+    /* font-family: 'Poor Story', cursive; */
+    text-align: center;
+    font-size: 17px;
+    font-weight: 600;
+    color: rgb(0, 101, 189);
+    margin-top: 20px;
+}
