@@ -1,0 +1,8 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+
+        "strict": true, // 더욱 엄격하게 타입스크립트 문법 적용 (정확한 정보 받을 수 있음)
+    }
+}
