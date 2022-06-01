@@ -13,9 +13,11 @@
 
     <script>
         // 1. alert-btn에 이벤트 리스너 등록을 통해 alert창을 출력하는 기능
-        document.getElementById('alert-btn').addEventListener('click', function() {
-            alert('클릭 이벤트에 대해 이벤트 리스너 등록으로 alert창 띄우기')
+        const click = (() => {
+            alert('hi');
         })
+
+        document.getElementById('alert-btn').addEventListener('click', click)
     </script>
 </body>
 </html>

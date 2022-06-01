@@ -1,8 +1,8 @@
 "use strict";
 function hello3(person) {
-    console.log(`Hello! This is ${person.name}!`);
+    console.log("Hello! This is ".concat(person.name, "!"));
 }
-const person4 = {
+var person4 = {
     name: 'likelion',
     part: 'front',
 };

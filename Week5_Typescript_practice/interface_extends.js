@@ -1,5 +1,5 @@
 "use strict";
-const koreanObj = {
+var koreanObj = {
     name: '유지민',
     city: 'incheon',
 };
